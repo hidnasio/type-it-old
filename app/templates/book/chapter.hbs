@@ -1,7 +1,6 @@
 {{model.title}}
 
-{{#each model.sections as |section|}}
-  <p>
-    {{section.content}}
-  </p>
-{{/each}}
+{{#liquid-bind currentSection use="toUp" class="section-effect" as |currentModel|}}
+  {{currentModel.content}}
+  <button {{action "next" currentModel}}>Go</button>
+{{/liquid-bind}}
