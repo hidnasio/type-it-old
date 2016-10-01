@@ -1,18 +1,7 @@
 <ul>
 {{#each model as |book|}}
   <li>
-    {{book.title}}
-    <ol>
-      {{#each book.chapters as |chapter|}}
-        <li>chapter.title</li>
-
-        <ul>
-          {{#each chapter.sections as |section|}}
-            <li>{{section.content}}</li>
-          {{/each}}
-        </ul>
-      {{/each}}
-    </ol>
+    {{link-to book.title "book.index" book.id}}
   </li>
 {{/each}}
 </ul>
