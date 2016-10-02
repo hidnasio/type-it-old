@@ -1,0 +1,12 @@
+<div class="section-viewer">
+  <div class="section-viewer__container" style={{positionClass}}>
+    {{#each sections as |section index|}}
+      {{#section-viewer/content content=section.content position=index current=currentSection as |content|}}
+        {{yield content}}
+      {{/section-viewer/content}}
+    {{/each}}
+  </div>
+  <div class="section-viewer__overlay"></div>
+</div>
+
+<button {{action "next"}}>Go</button>
