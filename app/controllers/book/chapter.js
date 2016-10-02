@@ -3,14 +3,14 @@ import Ember from 'ember';
 const { computed } = Ember;
 
 export default Ember.Controller.extend({
-  currentSection: computed(function() {
-    return this.get('model.sections.firstObject');
+  positionClass: computed('currentSection', function() {
+    let value = this.get('currentSection') * 200;
+    return `top: -${value}px`;
   }),
 
   actions: {
-    next(section) {
-      let nextSection = this.get('model.sections').objectAt(section.get('id'));
-      this.set('currentSection', nextSection);
+    next() {
+      this.incrementProperty('currentSection');
     }
   }
 });

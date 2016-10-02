@@ -1,0 +1,26 @@
+.section-wrapper {
+  width: 50%;
+  border: solid 1px red;
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+}
+
+.section-wrapper .section-content {
+  position: absolute;
+  top: 0;
+  transition: all .5s;
+}
+.section-wrapper .section-content p {
+  height: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.section-wrapper .overlay {
+  position: absolute;
+  bottom: 0;
+  height: 350px;
+  width: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, .3), #fff);
+}

@@ -1,6 +1,13 @@
 {{model.title}}
 
-{{#liquid-bind currentSection use="toUp" class="section-effect" as |currentModel|}}
-  {{currentModel.content}}
-  <button {{action "next" currentModel}}>Go</button>
-{{/liquid-bind}}
+<div class="section-wrapper">
+  <div class="section-content" style={{positionClass}}>
+    {{#each model.sections as |section|}}
+      <p>
+        {{section.content}}
+      </p>
+    {{/each}}
+  </div>
+  <div class="overlay"></div>
+</div>
+<button {{action "next"}}>Go</button>
