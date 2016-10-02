@@ -8,8 +8,7 @@
 .section-viewer__container {
   position: absolute;
   top: 0;
-  transition: all .5s;
-
+  transition: all .5s ease-in;
 }
 
 .section-viewer__content {
@@ -37,5 +36,3 @@
   width: 100%;
   background-image: linear-gradient(transparentize($color-athens-gray, 0.9), $color-athens-gray);
 }
-
-
