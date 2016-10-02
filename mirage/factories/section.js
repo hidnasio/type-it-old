@@ -2,6 +2,6 @@ import { Factory, faker } from 'ember-cli-mirage';
 
 export default Factory.extend({
   content() {
-    return faker.lorem.paragraph();
+    return faker.lorem.paragraph(5);
   }
 });

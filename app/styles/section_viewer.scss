@@ -1,0 +1,41 @@
+.section-viewer {
+  width: 50%;
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+
+}
+.section-viewer__container {
+  position: absolute;
+  top: 0;
+  transition: all .5s;
+
+}
+
+.section-viewer__content {
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  font-family: $font-base;
+  font-size: em(22);
+  color: $color-oslo-gray;
+  line-height: 1.2;
+}
+
+.section-viewer__content::first-letter {
+  font-family: $font-decorative;
+  font-size: 280%;
+  float: left;
+  margin-right: em(2);
+  line-height: 1;
+}
+
+.section-viewer__overlay {
+  position: absolute;
+  bottom: 0;
+  height: 250px;
+  width: 100%;
+  background-image: linear-gradient(transparentize($color-athens-gray, 0.9), $color-athens-gray);
+}
+
+

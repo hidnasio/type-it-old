@@ -1,13 +1,13 @@
-{{model.title}}
+<h3 class="heading heading--small heading--spaced">{{model.title}}</h3>
 
-<div class="section-wrapper">
-  <div class="section-content" style={{positionClass}}>
+<div class="section-viewer">
+  <div class="section-viewer__container" style={{positionClass}}>
     {{#each model.sections as |section|}}
-      <p>
+      <p class="section-viewer__content">
         {{section.content}}
       </p>
     {{/each}}
   </div>
-  <div class="overlay"></div>
+  <div class="section-viewer__overlay"></div>
 </div>
 <button {{action "next"}}>Go</button>

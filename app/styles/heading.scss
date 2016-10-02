@@ -1,0 +1,17 @@
+.heading {
+  margin: 0 0 rem(10) 0;
+  font-family: $font-title;
+  font-size: em(28);
+
+  &--medium {
+    font-size: em(24);
+  }
+
+  &--small {
+    font-size: em(20);
+  }
+
+  &--spaced {
+    margin-bottom: em(20);
+  }
+}

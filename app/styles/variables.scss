@@ -8,6 +8,14 @@ $browser-context: 16;
   @return #{$pixels / $context}rem;
 }
 
+@font-face {
+    font-family: 'kramer';
+    src: url('/fonts/kramer-webfont.woff2') format('woff2'),
+         url('/fonts/kramer-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* color names from http://chir.ag/projects/name-that-color/ */
 $color-athens-gray: #eff1f3;
 $color-oslo-gray: #7c898b;
