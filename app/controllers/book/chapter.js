@@ -5,9 +5,7 @@ const { computed, String: { htmlSafe } } = Ember;
 export default Ember.Controller.extend({
   currentSection: 0,
 
-  sectionsCount: computed('model.sections.[]', function() {
-    return this.get('model.sections.length');
-  }),
+  sectionsCount: computed.alias('model.sections.length'),
 
   positionClass: computed('currentSection', function() {
     let top = 0;
@@ -27,9 +25,9 @@ export default Ember.Controller.extend({
   actions: {
     next() {
       let current = this.get('currentSection');
-      let max = this.get('sectionsCount');
+      let max = this.get('sectionsCount') - 1;
 
-      if (current < --max) {
+      if (current < max) {
         this.incrementProperty('currentSection');
       }
     }
