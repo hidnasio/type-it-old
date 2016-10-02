@@ -3,9 +3,7 @@
 <div class="section-viewer">
   <div class="section-viewer__container" style={{positionClass}}>
     {{#each model.sections as |section|}}
-      <p class="section-viewer__content">
-        {{section.content}}
-      </p>
+      {{section-content content=section.content}}
     {{/each}}
   </div>
   <div class="section-viewer__overlay"></div>
