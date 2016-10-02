@@ -1,6 +1,24 @@
+html {
+  font-size: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
 .section-wrapper {
   width: 50%;
-  border: solid 1px red;
   overflow: hidden;
   height: 300px;
   position: relative;
@@ -20,7 +38,7 @@
 .section-wrapper .overlay {
   position: absolute;
   bottom: 0;
-  height: 350px;
+  height: 250px;
   width: 100%;
-  background-image: linear-gradient(rgba(255, 255, 255, .3), #fff);
+  background-image: linear-gradient(transparentize($color-athens-gray, 0.9), $color-athens-gray);
 }

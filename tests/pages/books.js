@@ -6,7 +6,7 @@ import {
 } from 'ember-cli-page-object';
 
 export default create({
-  visit: visitable('/books'),
+  visit: visitable('/'),
   books: collection({
     itemScope: 'li',
 

@@ -1,0 +1,20 @@
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels / $context}em;
+}
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels / $context}rem;
+}
+
+/* color names from http://chir.ag/projects/name-that-color/ */
+$color-athens-gray: #eff1f3;
+$color-oslo-gray: #7c898b;
+$color-mine-shaft: #4e4a59;
+$color-old-brick:  #9b1d20;
+$color-zombie: #ddd78d;
+
+$font-title: 'Lato', sans-serif;
+$font-base: 'News Cycle', sans-serif;
+$font-decorative: 'kramer', cursive;

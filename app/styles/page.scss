@@ -1,0 +1,24 @@
+.page {
+  font-family: $font-base;
+  background: $color-athens-gray;
+  min-height: 100vh;
+  padding: rem(40) 0 0 rem(40);
+}
+
+.page__heading {
+  margin: 0 0 rem(40) 0;
+  font-family: $font-title;
+  font-size: em(16);
+}
+
+.page__heading--big {
+  font-size: em(40);
+}
+
+.page__heading--medium {
+  font-size: em(36);
+}
+
+.page__heading--small {
+  font-size: em(30);
+}

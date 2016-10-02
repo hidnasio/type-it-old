@@ -4,7 +4,7 @@ import page from 'type-it/tests/pages/books';
 
 moduleForAcceptance('Acceptance | books');
 
-test('visiting /books', function(assert) {
+test('visiting /', function(assert) {
   assert.expect(3);
 
   server.createList('book', 2);
@@ -15,7 +15,7 @@ test('visiting /books', function(assert) {
   page.visit();
 
   andThen(function() {
-    assert.equal(currentURL(), '/books');
+    assert.equal(currentURL(), '/');
     assert.equal(page.books().count, 3);
 
     assert.equal(page.books(2).title, 'Foo bar');
