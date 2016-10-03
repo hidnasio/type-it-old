@@ -2,10 +2,10 @@ import Ember from 'ember';
 
 const { computed, String: { htmlSafe } } = Ember;
 
-export default Ember.Controller.extend({
+export default Ember.Component.extend({
   currentSection: 0,
 
-  sectionsCount: computed.alias('model.sections.length'),
+  sectionsCount: computed.alias('sections.length'),
 
   positionClass: computed('currentSection', function() {
     let top = 0;

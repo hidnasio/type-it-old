@@ -1,11 +1,6 @@
 <h3 class="heading heading--small heading--spaced">{{model.title}}</h3>
 
-<div class="section-viewer">
-  <div class="section-viewer__container" style={{positionClass}}>
-    {{#each model.sections as |section|}}
-      {{section-content content=section.content}}
-    {{/each}}
-  </div>
-  <div class="section-viewer__overlay"></div>
-</div>
-<button {{action "next"}}>Go</button>
+{{#section-viewer sections=model.sections as |content|}}
+  {{content}}
+{{/section-viewer}}
+
