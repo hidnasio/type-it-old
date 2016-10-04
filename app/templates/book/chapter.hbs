@@ -1,6 +1,6 @@
 <h3 class="heading heading--small heading--spaced">{{model.title}}</h3>
 
-{{#section-viewer sections=model.sections as |content|}}
-  {{content}}
+{{#section-viewer sections=model.sections as |completed pending|}}
+  <span class="section-viewer__completed">{{completed}}</span><span class="section-viewer__pending">{{pending}}</span>
 {{/section-viewer}}
 

@@ -16,8 +16,8 @@ test('renders the content', function(assert) {
   assert.expect(2);
 
   page.render(hbs`
-    {{#section-viewer/content content="Foo bar" as |content|}}
-      {{content}}
+    {{#section-viewer/content content="Foo bar" as |completed pending|}}
+    {{completed}}{{pending}}
     {{/section-viewer/content}}
   `);
 
@@ -31,8 +31,7 @@ test('it can be active/inactive', function(assert){
   this.set('current', 4);
 
   page.render(hbs`
-    {{#section-viewer/content content="Foo bar" position=4 current=current as |content|}}
-      {{content}}
+    {{#section-viewer/content content="Foo bar" position=4 current=current}}
     {{/section-viewer/content}}
   `);
 

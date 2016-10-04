@@ -1,8 +1,8 @@
 <div class="section-viewer">
   <div class="section-viewer__container" style={{positionClass}}>
     {{#each sections as |section index|}}
-      {{#section-viewer/content content=section.content position=index current=currentSection as |content|}}
-        {{yield content}}
+      {{#section-viewer/content content=section.content position=index current=currentSection next=(action 'next') as |completed pending|}}
+        {{yield completed pending}}
       {{/section-viewer/content}}
     {{/each}}
   </div>

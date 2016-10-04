@@ -27,6 +27,7 @@
   float: left;
   margin-right: em(2);
   line-height: 1;
+  background-color: transparent;
 }
 
 .section-viewer__overlay {
@@ -35,4 +36,18 @@
   height: 250px;
   width: 100%;
   background-image: linear-gradient(transparentize($color-athens-gray, 0.9), $color-athens-gray);
+}
+
+.section-viewer__completed {
+  color: red;
+  white-space: pre-wrap;
+}
+
+.section-viewer__pending {
+  color: blue;
+  white-space: pre-wrap;
+}
+
+.section-viewer__pending > span {
+  background-color: yellow;
 }
